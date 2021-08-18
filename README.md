@@ -13,7 +13,7 @@ $ go get github.com/kmacute/golvalidator
 
 To use the package import it in your `*.go` code
 ```go
-import "github.com/kmacute/golvalidator"
+import "github.com/silasrm/golvalidator"
 ```
 
 ### Example
@@ -24,7 +24,7 @@ package main
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/kmacute/golvalidator"
+	"github.com/silasrm/golvalidator"
 )
 
 func main() {
