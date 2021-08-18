@@ -6,7 +6,7 @@ A golang laravel inspired validation
 
 Install the package using
 ```go
-$ go get github.com/kmacute/golvalidator
+$ go get github.com/silasrm/golvalidator
 ```
 
 ### Usage
