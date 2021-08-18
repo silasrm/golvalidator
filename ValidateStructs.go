@@ -9,7 +9,7 @@ import (
 
 func ValidateStructs(s interface{}) map[string][]string {
 	var errors = make(map[string][]string)
-	v := reflect.ValueOf(s)
+	v := reflect.ValueOf(s).Elem()
 	for i := 0; i < v.NumField(); i++ {
 		config := v.Type().Field(i).Tag.Get("validate")
 		fieldName := v.Type().Field(i).Tag.Get("json")
