@@ -5,20 +5,7 @@ import (
 	"reflect"
 	"strconv"
 	"strings"
-	"log"
-	"os"
 )
-
-func Log(s interface{}) {
-	// If the file doesn't exist, create it or append to the file
-	file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	log.SetOutput(file)
-	log.Println(s)
-}
 
 func ValidateStructs(s interface{}) map[string][]string {
 	var errors = make(map[string][]string)
@@ -337,7 +324,6 @@ func getMessage(validationRule string, configMessage []string, defaultMessage st
 		}
 	}
 
-	Log(message)
 	if message == "" {
 		message = defaultMessage
 	}
