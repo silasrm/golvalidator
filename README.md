@@ -36,7 +36,7 @@ func main() {
 }
 
 type UserType struct {
-	FirstName  string `json:"first_name" validate:"required_with:last_name"`
+	FirstName  string `json:"first_name" validate:"required_with:last_name"  validate_message:"required_with:O campo %s é obrigatório quando %s está presente."``
 	MiddleName string `json:"middle_name" validate:"required|string|min:3|same:last_name"`
 	LastName   string `json:"last_name" validate:"required|string|min:3"`
 }
